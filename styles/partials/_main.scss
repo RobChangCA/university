@@ -1,0 +1,838 @@
+// about
+	.about{
+		margin-bottom: 100px;
+	}
+	.h2big{
+		color: $dark;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	.about__flexContainer{
+		display: flex;
+		@include respond-to("large"){
+		  flex-direction: column-reverse;
+		  margin: 50px; 
+
+		}
+	}
+	.about__textContainer{
+		padding-right: 20px;
+		flex: 1; 
+	}
+	.h3big{
+		color: $dark;
+		
+	}
+	.h3big--about{
+		margin: 0;
+		margin-bottom: 20px;
+		text-align: left;
+	}
+	.about__paragraph,.about__subHead{
+		font-size: 1.4rem;
+		font-family: 'Open Sans', sans-serif;
+		color: $grey;
+		transition: all .3s;
+		&:hover{
+			background: $green;
+			color: white;
+		}
+	}
+	.about__subHead--active{
+		position: relative;
+		background: $green;
+		color: white;
+		padding: 20px;
+		margin: 0; 
+		&::before{
+			content:"-";
+			display: block;
+			position: absolute;
+			left: 10px;
+		}
+	}
+	.about__subParagraph{
+		font-size: 1.4rem;
+		font-family: 'Open Sans', sans-serif;
+		color: $grey;
+		border: 1px solid $grey;
+		border-top: none;
+		margin-top: 0;
+		padding: 20px;
+
+	}
+	.about__subHead{
+		font-weight: bold;
+		position: relative;
+		padding: 20px;
+		border: 1px solid $grey;
+		margin:18px 0;
+		&::before{
+			content:"+";
+			display: block;
+			position: absolute;
+			left: 10px;
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	.about__imgContainer{
+		flex: 1;
+	}
+	.about__img{
+		width: 100%;
+	}
+// education
+	.education{
+		margin-bottom: 30px;
+	}
+	.h5small--green{
+		font-weight: normal;
+		color: $green;
+		text-align: center;
+	}
+	.h6big--education{
+		text-transform: uppercase;
+	}
+	.heading__paragraph{
+		text-align: center;
+		color: $grey;
+		font-size: 1.4rem;
+		width: 50%;
+		margin: 0 auto;
+		padding: 20px 0;
+	}
+	.educationGallery__paragraph{
+		font-size: 1.4rem;
+		font-family: 'Open Sans', sans-serif;
+		color: $grey;
+	}
+	.education__container{
+		display: flex;
+		justify-content: space-around;
+		text-align: center;
+		@include respond-to("large"){
+		  flex-direction: column;
+		  margin: 20px 100px;
+		}
+		@include respond-to("medium"){
+		  margin: 20px 50px;
+		}
+		@include respond-to("small"){
+		  margin: 20px 20px;
+		}
+	}
+	.education__cell{
+		padding: 0 30px;
+	}
+	.education__buttonContainer{
+		display: block;
+		margin: 50px;
+		text-align: center;
+	}
+// courses
+	.courses{
+		background: $backgroundHeader;
+		text-align: center;
+		padding: 50px;
+	}
+	.h2small--courses{
+		text-transform: uppercase;
+	}
+	.h6xsmall--courses{
+		font-size: 1.4rem;
+		font-family: 'Open Sans', sans-serif;
+		color: $dark;
+
+	}
+	.coursesContainer{
+		display: flex;
+		text-align: left;
+		@include respond-to("large"){
+		  flex-direction: column;
+		}
+	}
+	.coursesContainer__frame{
+		background: white;
+		box-shadow: 0px 4px 9.7px 0.3px rgba(0, 0, 0, 0.1);
+		margin: 10px 10px;
+		img{
+			width: 100%;
+		}
+		@include respond-to("large"){
+		  // margin: 20px 50px;
+		}
+	}
+	.coursesContainer__text{
+		margin: 20px;
+	}
+	.courseContainer__paragraph{
+		font-size: 1rem;
+		color: $grey;
+	}
+	.coursesContainer__time{
+		font-size: 1.2rem;
+		color: $grey;
+		i{
+			margin: 0 5px;
+		}
+	}
+	.courses__apply{
+		color: white;
+		background: $green;
+		border-radius: 15px;
+		padding: 10px;
+		margin-top: 10px;
+		display: inline-block;
+		border: 1px solid rgba(0,0,0,0);
+		transition: all .3s;
+		&:hover{
+			color: $green;
+			background: white;
+			border: 1px solid $green;
+		}
+	}
+// news
+	.news{
+		padding-top: 100px;
+	}
+	.news__container{
+		display: flex;
+		@include respond-to("large"){
+		  flex-direction: column;
+		  align-items: center;
+		}
+
+	}
+	.news__imgFrame{
+		// max-height: 285px;
+		position: relative;
+		@include respond-to("large"){
+		  display: flex;
+		  justify-content: center;
+		}
+	}
+	.news__img{
+		max-width: 100%;
+	}
+	.news__frame{
+		margin: 10px;
+		width: 33.33%;
+		@include respond-to("large"){
+		  width: 100%;
+		}
+		
+	}
+	.news__dateBox{
+		position: absolute;
+		background: $green;
+		color: white;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 1.4rem;
+		padding: 10px 20px;
+		position: absolute;
+		right: 10%;
+		bottom: -10%;
+		@include respond-to("large"){
+		  right: 30%;
+		  bottom: -5%;
+		}
+		@include respond-to("medium"){
+		  right: 20%;
+		  bottom: -5%;
+		}
+	}
+	.news__text{
+		@include respond-to("large"){
+		  margin: 0 50px;
+		}
+		
+	}
+	.news__buttonContainer{
+		text-align: center;
+		margin: 50px;
+	}
+	.news__paragraph{
+		font-size: 1.2rem;
+		line-height: 2.4rem;
+		color: $grey;
+		font-family: 'Open Sans', sans-serif;
+	}
+	.news__readMore{
+		color: $green;
+	}
+// teacher
+	.teacher{
+		text-align: center;
+		margin-bottom: 100px;
+	}
+	.teacher__container{
+		display: flex;
+		margin-bottom: 50px;
+		justify-content: space-around;
+		@include respond-to("medium"){
+		  flex-direction: column;
+		  align-items: center;
+		}
+
+
+	}
+	.teacher__frame{
+		width: calc(33.33% - 20px);
+		margin: 10px;
+		text-align: left;
+		@include respond-to("large"){
+		  width: 100%;
+		  display: flex;
+		  flex-direction: column;
+		}
+
+	}
+	.teacher__image{
+		width: 100%;
+	}
+	.teacher__text{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.h6big--green{
+		color: $green;
+		font-size: 1.8rem;
+		margin:0;
+	}
+	.teacher__connect{
+		font-size: 1.8rem;
+		color: $grey;
+		text-transform: uppercase;
+		font-family: 'Open Sans', sans-serif;
+		margin-right: 30px;
+	}
+	.teacher__social{
+		font-size: 1.8rem;
+		color: $grey;
+		i{
+			margin:5px;
+		}
+	}
+	.teacher__connectedFlex{
+		display: flex;
+		align-items: center;
+	}
+// price
+	.price{
+		background: $backgroundGrey;
+		text-align: center;
+		padding: 100px 10px;
+		@include respond-to("large"){
+		  padding: 50px 10px;
+		}
+	}
+	.price__paragraph{
+		color: $grey;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.h3big--price{
+		text-transform: uppercase;
+	}
+	.h5big--caps{
+		text-transform: uppercase;
+	}
+	.h5big__open{
+		font-size: 2.4rem;
+		font-family: 'Open Sans', sans-serif;
+	}
+	.h5big__open--white{
+		font-size: 2.4rem;
+		font-family: 'Open Sans', sans-serif;
+	}
+	.price__container{
+		display: flex;
+		justify-content: space-around;
+		@include respond-to("large"){
+		  flex-direction: column;
+		}
+
+	}
+	.price__cell{
+		background: white;
+		width: 100%;
+		margin: 10px;
+		box-shadow: 0px 4px 9.7px 0.3px rgba(0, 0, 0, 0.1);
+		@include respond-to("small"){
+			margin: 0;
+		}
+	}
+	.price__period{
+		background: $backgroundGrey;
+		padding: 5px;
+		border-bottom: 1px solid #d7d7d7;;
+	}
+	.price__period--green{
+		background: rgba(24, 187, 124, 0.82);
+		color: white;
+		padding: 5px;
+	}
+	.price__amount{
+		font-size: 1.8rem;
+		font-family: 'Open Sans', sans-serif;
+	}
+	.price__list{
+		padding:5px;
+		li{
+			padding: 15px;
+		}
+	}
+	.price__list--check p{
+		position: relative;
+		&::after{
+			content:"✓";
+			display: block;
+			color: $green;
+			position: absolute;
+			left: 15px;
+			top: 35%;
+		}
+	}
+	.price__choose{
+		font-size:1.4rem;
+		text-transform: uppercase;
+		text-align: center;
+		width: 100%;
+		display: block;
+		transition: all .3s;
+		&:hover{
+			color: $green;
+		}
+	}
+	.price__lastItem{
+		border-bottom: 1px dotted #d7d7d7;
+	}
+	.price__choose--green{
+		font-size:1.4rem;
+		text-transform: uppercase;
+		text-align: center;
+		width: 100%;
+		color: $green; 
+		display: block;
+	}
+// testimonial
+	.testimonial{
+		position: relative;
+		padding-bottom: 100px;
+		border-bottom: 1px solid #d7d7d7;
+		@include respond-to("small"){
+			padding-bottom: 100px;
+		}
+	}
+	.h2small--testimonial{
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.testimonial__container{
+		display: flex;
+		@include respond-to("large"){
+		  flex-direction: column;
+		}
+
+	}	
+	.testimonial__cell{ 
+		border: 1px solid #d7d7d7;
+		margin: 20px;
+		display: flex;
+		padding: 25px;
+		position: relative;
+		&::after{
+			display: block;
+			content: "";
+			height: 2px;
+			width: 70%;
+			background: $green;
+			position: absolute;
+			top:0;
+			right: 0;
+		}
+		@include respond-to("small"){
+		  flex-direction: column;
+		}
+	}
+	.testimonial__imgFrame{
+		margin-right: 20px;
+		@include respond-to("small"){
+		  margin: 0 auto;
+		}
+	}
+	.testimonial__text{
+		color: $grey;
+		p{
+			font-family: 'Open Sans', sans-serif;
+			color:  #666666;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 30px;
+			text-align: left;
+		}
+	}
+	.testimonial__h6{
+		display: flex;
+	}
+	.h6--italicBold{
+		font-size: 1.8rem;
+		font-style: italic;
+		font-weight: bold;
+		color: #474646;
+		margin: 0;
+		@include respond-to("small"){
+			font-size: 1.5rem;
+		}
+
+	}
+	.h6--italic{
+		font-size: 1.8rem;
+		font-style: italic;
+		font-weight: normal;
+		color: #474646;
+		color: #666666;
+		margin: 0;
+	}
+	.testimonial__dots{
+		position: relative;
+		text-align: center;
+		top: 150px;
+		&::after{
+			content: "..";
+			display: block;
+			color: $grey;
+			font-size: 100px;
+			font-family: 'Open Sans', sans-serif;
+			position: absolute;
+			bottom: 50px;
+			right: 535px;
+		}
+		&::before{
+			content: ".";
+			display: block;
+			color: $green;
+			font-size: 100px;
+			font-family: 'Open Sans', sans-serif;
+			position: absolute;
+			bottom: 50px;
+			right: 50%;
+		}
+	}
+// gallery
+	.gallery{
+		padding-top: 100px;
+		margin-bottom: 100px;
+		@include respond-to("small"){
+			padding-top: 50px;
+		}
+	}
+	.h2small--gallery{
+		text-transform: uppercase;
+		text-align: center;
+	}
+	.galleryAnchor__container{
+		display: flex;
+		justify-content: center;
+		margin-bottom: 50px;
+		@include respond-to("medium"){
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	.galleryAnchor__item{
+		background: #f8f8f8;
+		font-family: 'Open Sans', sans-serif;
+		color: $dark; 
+		font-size: 2.3rem;
+		margin: 10px;
+		padding: 15px;
+		transition: all .3s;
+		&:hover{
+			background: $green;
+			color: white;
+		}
+	}
+	.galleryAnchor__item--active{
+		background: $green;
+		font-family: 'Open Sans', sans-serif;
+		color: white;
+		font-size: 2.3rem;
+		margin: 10px;
+		padding: 15px;
+	}
+	.gallery__container{
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		img{
+			width: 100%;
+		}
+	}
+	.gallery__cell{
+		width: 33.33%;
+		position: relative;
+		border: 1px solid white;
+		&:hover .gallery__overlay{
+			opacity: 1;
+		}
+		@include respond-to("large"){
+		  width: 100%;
+		}
+	}
+	.gallery__overlay{
+		display: flex;
+		background: rgba(66, 199, 148, 0.8);
+		position: absolute;
+		top:0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		opacity: 0;
+		align-items: center;
+		justify-content: center;
+		transition: all .3s;
+	}
+	.overlay__container{
+		display: flex;
+
+		
+	}
+	.overlay__anchor{
+		display: block;
+		font-size: 2.5rem;
+		text-align: center;
+		line-height: 4rem;
+		height: 50px;
+		width: 50px;
+		color: white;
+		border: 1px solid white;
+		border-radius: 50%;
+		margin: 10px;
+	}
+	.clearButton--gallery{
+		display: block;
+		margin: 0 auto;
+		margin-top: 50px;
+		text-align: center;
+		font-size: 1.8rem;
+		font-weight: bold;
+	}
+// subscribe
+	.subscribe__bar{
+		background: #42c794;
+		padding: 25px;
+	}
+	.h4big--white{
+		text-transform: uppercase;
+		color: white;
+		margin: 0;
+		@include respond-to("large"){
+			margin: 50px;
+			text-align: center;
+		}
+	}
+	.subscribe__container{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include respond-to("large"){
+		  flex-direction: column;
+		}
+		
+	}
+	// why do I need to remove margin from the h4 in order for the form to be centered?
+	.subscribe__formOne{
+		// border: 1px solid white;
+		// border-radius: 15px;
+		display: flex;
+		// padding: 20px;
+		max-width: 100%;
+		@include respond-to("small"){
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	.formOne__email{
+		font-size: 1.8rem;
+		color: white;
+		border: 1px solid white;
+		border-radius: 15px 0 0 15px;
+		border-right: 1px solid white;
+		background: none;
+		padding: 20px;
+		@include respond-to("small"){
+			border-radius: 15px;
+			margin-bottom: 10px;
+		}
+	}
+
+		.formOne__email[type="email"]::-webkit-input-placeholder {
+		color: white !important;
+		}
+		 
+		.formOne__email[type="email"]:-moz-placeholder { /* Firefox 18- */
+		color: white !important;  
+		}
+		 
+		.formOne__email[type="email"]::-moz-placeholder {  /* Firefox 19+ */
+		color: white !important;  
+		}
+		 
+		.formOne__email[type="email"]:-ms-input-placeholder {  
+		color: white !important;  
+		}
+	.formOne__button{
+		background: none;
+		border-width: 1px 1px 1px 0;
+		border-color: white;
+		border-style: solid;
+		border-radius: 0 15px 15px 0;
+		color: white;
+		font-size: 2.4rem;
+		font-weight: bold;
+		position: relative;
+		padding: 15px 15px 15px 50px;
+		text-transform: uppercase;
+		@include respond-to("small"){
+			border-radius: 15px;
+			border: 1px solid white;
+		}
+
+		&::before{
+			content:"\f1d8";
+			font-family: FontAwesome;
+			display: block;
+			position: absolute;
+			left: 10px;
+		}
+	}
+	.subscribe__containerTwo{
+		display: flex;
+		@include respond-to("large"){
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	.subscribeTwo{
+		width: 70%;
+		font-size: 2rem;
+		@include respond-to("small"){
+			text-align: center;
+			width: 100%;
+		}
+	}
+	.h3small--subscribe{
+		color: black;
+	}
+	.subscribe__formTwo{
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: 45px;
+		input,textarea{
+			padding: 20px;
+			border-radius: 15px;
+			border: 1px solid #cccccc;
+		}
+		@include respond-to("large"){
+			margin-right: 0;
+			margin: 0 10px;
+		}
+	}
+	.subscribeFormTwo__name{
+		width: calc(50% - 5px);
+		margin-right: 5px;
+		margin-bottom: 10px;
+		@include respond-to("large"){
+			width: 100%;
+			margin-right: 0;
+		}
+	}
+	.subscribeFormTwo__email{
+		width: calc(50% - 5px);
+		margin-left: 5px;
+		margin-bottom: 10px;
+		@include respond-to("large"){
+			width: 100%;
+			margin-left: 0;
+		}
+	}
+	.subscribeFormTwo__subject{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.subscribeFormTwo__text{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.greenButton--formTwo{
+		@include respond-to("large"){
+			margin: 0 auto;
+		}
+	}
+	.subscribeAddress{
+		font-family: 'Open Sans', sans-serif;
+		color: $grey;
+		font-size: 2.2rem;
+	}
+	.subscribeAddress__address{
+		position: relative;
+		padding-left: 75px;
+		padding-bottom: 10px;
+		&::before{
+			content: "\f041";
+			font-family: FontAwesome;
+			display: block;
+			position: absolute;
+			background: $green;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 50px;
+			color: white;
+			left:0;
+		}
+	}
+	.subscribeAddress__phone{
+		position: relative;
+		padding-left: 75px;
+		padding-bottom: 10px;
+		&::before{
+			content: "\f095";
+			font-family: FontAwesome;
+			display: block;
+			position: absolute;
+			background: $green;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 50px;
+			color: white;
+			left: 0;
+		}
+	}
+	.subscribeAddress__email{
+		position: relative;
+		padding-left: 75px;
+		padding-bottom: 10px;
+		&::before{
+			content: "\f003";
+			font-family: FontAwesome;
+			display: block;
+			position: absolute;
+			background: $green;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 50px;
+			color: white;
+			left: 0;
+		}
+	}
+

@@ -1,0 +1,120 @@
+// font-family: 'Raleway', sans-serif;
+// font-family: 'Open Sans', sans-serif;
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+li{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+html{
+	font-size: 62.5%;
+}
+body{
+	font-family: 'Raleway', sans-serif;
+}
+.wrapper{
+	max-width: 1179px;
+	margin: 0 auto;
+}
+h1{
+	font-size: 5.5rem;
+	color: white;
+	text-transform: uppercase;
+	@include respond-to("small"){
+		font-size: 4rem;
+	}
+}
+.h2big{
+	font-size: 3.6rem;
+}
+.h2small{
+	font-size: 3.5rem;
+}
+.h3big{
+	font-size: 3.0rem;
+}
+
+.h3small{
+	font-size:2.8rem;
+}
+.h3small--white{
+	font-size: 2.8rem;
+}
+.h4big{
+	font-size: 2.6rem;
+}
+.h4small{
+	font-size: 2.5rem;
+	margin: 10px 0;
+}
+.h5big{
+	font-size: 2.4rem;
+}
+.h5small{
+	font-size: 2.0rem;
+}
+.h5small--white{
+	font-size: 2.0rem;
+}
+.h6big{
+	font-size: 1.8rem;
+}
+.h6small{
+	font-size: 1.6rem;
+}
+.h6xsmall{
+	font-size: 1.4rem;
+	font-family: 'Open Sans', sans-serif; 
+}
+
+// buttons
+.greenButton{
+	background: $green;
+	color: white;
+	text-transform: uppercase;
+	border-radius: 15px;
+	border: 1px solid rgba(0, 0, 0, .0);
+	padding: 10px;
+	transition: all .3s;
+	&:hover{
+		background: white;
+		color:$green;
+		border: 1px solid $green;
+	}
+}
+.blackButton{
+	background: black;
+	color: white;
+	text-transform: uppercase;
+	border-radius: 15px;
+	border: 1px solid rgba(0, 0, 0, .0);
+	padding: 10px;
+	transition: all .3s;
+	&:hover{
+		background: white;
+		color: black;
+		border: 1px solid black;
+	}
+}
+.clearButton{
+	background: none;
+	color: black;
+	text-transform: uppercase;
+	border-radius: 15px;
+	border: 1px solid $green;
+	padding: 10px;
+	margin-top: 100px;
+	transition: all .3s;
+	&:hover{
+		background: $green;
+		color: white;
+		border: 1px solid rgba(0, 0, 0, .0);
+	}
+}
