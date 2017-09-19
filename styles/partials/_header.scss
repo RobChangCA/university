@@ -12,7 +12,7 @@
 	  flex-direction: column;
 	  text-align: center;
 	}
-	@include respond-to("medium"){
+	@include respond-to("medium"){ 
 	  display: none;  
 	}
 }
@@ -199,7 +199,11 @@ input#toggle:checked + .overlay__menu .overlay__contactContainer{
 	bottom: 50px;
 	right: 50%;
 }
-
+.tagline{
+	@include respond-to('medium'){
+		display: none;
+	}
+}
 
 //overlay menu
 .overlay__menu{

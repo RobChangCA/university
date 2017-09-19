@@ -517,6 +517,10 @@ input#toggle:checked + .overlay__menu .overlay__contactContainer {
   bottom: 50px;
   right: 50%; }
 
+@media (max-width: 645px) {
+  .tagline {
+    display: none; } }
+
 .overlay__menu {
   display: -webkit-box;
   display: -webkit-flex;
